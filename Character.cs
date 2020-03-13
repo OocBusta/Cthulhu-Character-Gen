@@ -26,15 +26,18 @@ namespace Cthulhu_Character_Generator
         public int Sanity { get; set; }
         public int Luck { get; set; }
 
+        public bool isNewCharacter { get; set; }
+
         public Character()
         {
+            isNewCharacter = true;
             Name = "Unnamed Character";
             Player = "--";
             Occupation = "--";
             Sex = "--";
             Residence = "--";
             BirthPlace = "--";
-            Age = 00;
+            Age = 0;
             Strength = 15;
             Dexterity = 30;
             Intelligence = 45;
@@ -42,7 +45,7 @@ namespace Cthulhu_Character_Generator
             Appearance = 75;
             Power = 90;
             Size = 99;
-            Education = 00;
+            Education = 0;
             HitPoint = 0;
             Sanity = 0;
             Luck = 0;
@@ -160,6 +163,72 @@ namespace Cthulhu_Character_Generator
                     Console.Write(value[x, 0]);
                     ColourDisplay(value[x, 1]);
                 }
+            }
+        }
+
+        // A method to directly handle 
+        public void SetDetail(string userInput, string userChoice)
+        {
+            switch (userChoice.ToLower())
+            {
+                case "name":
+                    Name = userInput;
+                    break;
+                case "player":
+                    Player = userInput;
+                    break;
+                case "occupation":
+                    Occupation = userInput;
+                    break;
+                case "sex":
+                    Sex = userInput;
+                    break;
+                case "age":
+                    Age = int.Parse(userInput);
+                    break;
+                case "birthplace":
+                    BirthPlace = userInput;
+                    break;
+                case "residence":
+                    Residence = userInput;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // Override string based method as to handle int based characteristics on
+        // The character.
+        public void SetDetail(int userInput, string userChoice)
+        {
+            switch (userChoice.ToLower())
+            {
+                case "str":
+                    Strength = userInput;
+                    break;
+                case "dex":
+                    Dexterity = userInput;
+                    break;
+                case "int":
+                    Intelligence = userInput;
+                    break;
+                case "con":
+                    Constitution = userInput;
+                    break;
+                case "app":
+                    Appearance = userInput;
+                    break;
+                case "pow":
+                    Power = userInput;
+                    break;
+                case "siz":
+                    Size = userInput;
+                    break;
+                case "edu":
+                    Education = userInput;
+                    break;
+                default:
+                    break;
             }
         }
     }
