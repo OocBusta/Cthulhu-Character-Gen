@@ -8,6 +8,7 @@ namespace Cthulhu_Character_Generator
         {
             Logic game = new Logic();
             game.CreateNewChar();
+            Console.ReadLine();
         }
     }
 }

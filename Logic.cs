@@ -11,25 +11,23 @@ namespace Cthulhu_Character_Generator
 
         private string temp;
 
-        private bool willContinue = true;
-
         public void CreateNewChar()
         {
-            if(player.isNewCharacter == true)
+            if (player.isNewCharacter == true)
             {
-                temp = userInput.GetInput("name");
+                temp = userInput.InputName();
                 player.SetDetail(temp, "name");
-                temp = userInput.GetInput("player");
+                temp = userInput.InputPlayer();
                 player.SetDetail(temp, "player");
-                temp = userInput.GetInput("sex");
+                temp = userInput.InputSex();
                 player.SetDetail(temp, "sex");
-                temp = userInput.GetInput("age");
+                temp = userInput.InputAge();
                 player.SetDetail(temp, "age");
-                temp = userInput.GetInput("occupation");
+                temp = userInput.InputOccupation();
                 player.SetDetail(temp, "occupation");
-                temp = userInput.GetInput("birthplace");
+                temp = userInput.InputBirthPlace();
                 player.SetDetail(temp, "birthplace");
-                temp = userInput.GetInput("residence");
+                temp = userInput.InputResidence();
                 player.SetDetail(temp, "residence");
                 player.DisplayCharacterInfo();
 

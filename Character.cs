@@ -84,7 +84,7 @@ namespace Cthulhu_Character_Generator
             Console.WriteLine(title + spacer);
             DisplaySplit(invDet, false);
             Console.WriteLine(stat + spacer);
-            Console.WriteLine("     #  |1/2|1/5");
+            Console.WriteLine("       #   | 1/2 | 1/5 ");
             DisplaySplit(invCha, true);
         }
 
@@ -103,43 +103,43 @@ namespace Cthulhu_Character_Generator
             if (value <= 15)
             {
                 Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine($"{text} | {value / 2} | {value / 5}");
+                Console.WriteLine($"  {text}  |  {value / 2}  |  {value / 5} ");
                 Console.ResetColor();
             }
             else if (value <= 30)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine($"{text} | {value / 2} | {value / 5}");
+                Console.WriteLine($"  {text}  |  {value / 2}  |  {value / 5} ");
                 Console.ResetColor();
             }
             else if (value <= 45)
             {
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.WriteLine($"{text} | {value / 2} | {value / 5}");
+                Console.WriteLine($"  {text}  |  {value / 2}  |  {value / 5} ");
                 Console.ResetColor();
             }
             else if (value <= 60)
             {
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine($"{text} | {value / 2} | {value / 5}");
+                Console.WriteLine($"  {text}  |  {value / 2}  |  {value / 5} ");
                 Console.ResetColor();
             }
             else if (value <= 75)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine($"{text} | {value / 2} | {value / 5}");
+                Console.WriteLine($"  {text}  |  {value / 2}  |  {value / 5} ");
                 Console.ResetColor();
             }
             else if (value <= 90)
             {
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine($"{text} | {value / 2} | {value / 5}");
+                Console.WriteLine($"  {text}  |  {value / 2}  |  {value / 5} ");
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"{text} | {value / 2} | {value / 5}");
+                Console.WriteLine($"  {text}  |  {value / 2}  |  {value / 5} ");
                 Console.ResetColor();
             }
         }
@@ -152,7 +152,7 @@ namespace Cthulhu_Character_Generator
                 for (int x = 0; x < value.Length / 2; x++)
                 {
                     Console.Write(value[x, 0]);
-                    ColourDisplay(value[x, 1], int.Parse(value[x,1]));
+                    ColourDisplay(value[x, 1], int.Parse(value[x, 1]));
                 }
             }
             else
