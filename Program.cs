@@ -6,8 +6,8 @@ namespace Cthulhu_Character_Generator
     {
         static void Main(string[] args)
         {
-            Character Test = new Character();
-            Test.DisplayCharacterInfo();
+            Logic game = new Logic();
+            game.CreateNewChar();
         }
     }
 }
